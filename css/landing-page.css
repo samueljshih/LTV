@@ -1,0 +1,10 @@
+/* Navigation */
+.nav {
+    background-color: beige;
+    display: flex;;
+}
+
+.search {
+    background-color: aqua;
+}
+
