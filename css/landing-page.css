@@ -1,10 +1,166 @@
+/* CSS reset */
+body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,form,fieldset,input,textarea,p,blockquote,th,td { 
+    margin:0;
+    padding:0;
+}
+html,body {
+    margin:0;
+    padding:0;
+}
+table {
+    border-collapse:collapse;
+    border-spacing:0;
+}
+fieldset,img { 
+    border:0;
+}
+input{
+    border:1px solid #b0b0b0;
+    padding:3px 5px 4px;
+    color:#979797;
+    width:190px;
+}
+address,caption,cite,code,dfn,th,var {
+    font-style:normal;
+    font-weight:normal;
+}
+ol,ul {
+    list-style:none;
+}
+caption,th {
+    text-align:left;
+}
+h1,h2,h3,h4,h5,h6 {
+    font-size:100%;
+    font-weight:normal;
+}
+q:before,q:after {
+    content:'';
+}
+
+/* Global */
+p {
+    font-family: HelveticaNeue;
+}
+
+body {
+    margin: 0;
+}
+
 /* Navigation */
 .nav {
-    background-color: beige;
-    display: flex;;
+    background-color: #004A80;
+    display: flex;
+    color: #FFFFFF;
+    justify-content: space-between
+}
+
+.nav-logo {
+    font-size: 30px;
+}
+
+.nav-icons {
+    display:flex;
+}
+
+.nav-icon {
+    margin-right: 10px;
 }
 
 .search {
-    background-color: aqua;
+    background-color: #004A80;
 }
 
+.search * {
+    color: #FFFFFF;
+    margin: 0 10px;
+    padding: 10px;
+}
+
+/* Title */
+.title {
+    font-family: HelveticaNeue-Bold;
+    font-size: 48px;
+    color: #FFFFFF;
+    letter-spacing: 0;
+    text-align: center;
+}
+
+/* Input */
+.email-input {
+    background: #FFFFFF;
+    box-shadow: inset 0 -1px 4px 0 rgba(0,0,0,0.20);
+    border-radius: 3px;
+    width: 75%;
+    margin-right: 20px;
+    height: 70px;
+    font-family: HelveticaNeue-Bold;
+    font-size: 16px;
+    color: #9B9B9B;
+    letter-spacing: 2px;
+    line-height: 18px;
+}
+
+.submit-btn {
+    background-image: linear-gradient(225deg, #F2DA56 0%, #F6BC25 100%);
+    box-shadow: 0 3px 0 0 #A6953B, inset 0 1px 0 0 #FFFFFF;
+    border-radius: 6px;
+    width: 25%;
+    font-family: HelveticaNeue-Bold;
+    font-size: 24px;
+    color: #004A80;
+    letter-spacing: 1px;
+    text-align: center;
+}
+
+.search-email-form {
+    display: flex;
+}
+
+.start-here {
+    margin: 0
+}
+
+/* Colors */
+.yellow {
+    color: #F6BC25;
+}
+
+/* Reverse Email Lookup Section */
+
+.reverse-email-lookup {
+    display: flex;
+    flex-direction: column;
+    background-image: linear-gradient(0deg, #E6E6E6 0%, #FFFFFF 100%);}
+
+.reverse-title {
+    font-family: HelveticaNeue-Bold;
+    font-size: 52px;
+    color: #004A80;
+    letter-spacing: 0;
+    text-align: center;
+    line-height: 70px;
+}
+
+.steps {
+    display: flex;
+    width: 100%;
+}
+
+.column {
+    flex: 50%;
+}
+
+.point {
+    display: flex;
+    height: 100px;
+    margin-top: 10px;
+}
+
+.point-left {
+    font-size: 30px;
+}
+
+.point-right {
+    margin-left: 10px;
+}
