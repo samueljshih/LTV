@@ -5,80 +5,90 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Billion Dollar Search Site</title>
     <link rel="stylesheet" href="./css/landing-page.css">
+    <script defer src="js/landing-page.js"></script>
 </head>
 <body>
     <nav class="nav">
-        <div class="nav-logo">Logo</div>
-        <div class="nav-icons">
-            <div class="nav-icon">Search</div>
-            <div class="nav-icon">User</div>
-        </div>  
+        <div class="nav-content content" >
+            <img src="./assets/svgs/Logo.svg" class="nav-logo">
+            <div class="nav-icons">
+                <img src="./assets/svgs/icn_search.svg" class="nav-icon">
+                <img src="./assets/svgs/icn_person.svg" class="nav-icon">
+            </div>  
+        </div>
     </nav>
 
     <section class="search">
-        <h1 class="title">Search Any Email Address</h1>
-        <p><span class="start-here yellow">Start Here</span> - Look up the owner's name, photos and online profiles. See what you find!</h2>
-        <form action="/action_page.php" class="search-email-form">
-            <input type="email" name="email" class="email-input" placeholder="EMAIL">
-            <input type="submit" value="GO!" class="submit-btn">
-        </form>
-        <p class="yellow">Enter Any Email Address. They won't be notified</p>
+        <div class="content">
+            <h1 class="title">Search Any Email Address</h1>
+            <p class="search-text"><span class="start-here yellow">Start Here</span> - Look up the owner's name, photos and online profiles. See what you find!</h2>
+            <form action="" class="search-email-form">
+                <input type="email" name="email" class="email-input" placeholder="EMAIL">
+                <input type="submit" value="GO!" class="submit-btn">
+            </form>
+            <p class="search-footer-text yellow">Enter Any Email Address. They won't be notified</p>
+        </div>
      </section>
 
      <section class="reverse-email-lookup"> 
+         <div class="content">
          <h1 class="reverse-title">Reverse Email Lookup</h1>
-        <div>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</div>
+        <div class="reverse-email-description">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</div>
         <div class="steps row">
             <div class="column">
                 <div class="point">
-                    <div class="point-left">One</div>
+                    <div class="point-left number">1</div>
                     <div class="point-right">
-                        <h3>Lorem Ipsum</h3>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                        <h3 class="point-title">Lorem Ipsum</h3>
+                        <p class="point-description">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
                     </div>
                 </div>
                 <div class="point">
-                    <div class="point-left">Two</div>
+                    <div class="point-left number">2</div>
                     <div class="point-right">
-                        <h3>Lorem Ipsum</h3>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                        <h3 class="point-title">Lorem Ipsum</h3>
+                        <p class="point-description">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
                     </div>
                 </div>
                 <div class="point">
-                    <div class="point-left">Three</div>
+                    <div class="point-left number">3</div>
                     <div class="point-right">
-                        <h3>Lorem Ipsum</h3>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                        <h3 class="point-title">Lorem Ipsum</h3>
+                        <p class="point-description">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
                     </div>
                 </div>
             </div>
             <div class="column">
                 <div class="point">
-                    <div class="point-left">Four</div>
+                    <div class="point-left number">4</div>
                     <div class="point-right">
-                        <h3>Lorem Ipsum</h3>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                        <h3 class="point-title">Lorem Ipsum</h3>
+                        <p class="point-description">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
                     </div>
                 </div>
                 <div class="point">    
-                    <div class="point-left">Five</div>
+                    <div class="point-left number">5</div>
                     <div class="point-right">
-                        <h3>Lorem Ipsum</h3>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                        <h3 class="point-title">Lorem Ipsum</h3>
+                        <p class="point-description">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
                     </div></div>
                 <div class="point">
-                    <div class="point-left">Six</div>
+                    <div class="point-left number">6</div>
                     <div class="point-right">
-                        <h3>Lorem Ipsum</h3>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                        <h3 class="point-title">Lorem Ipsum</h3>
+                        <p class="point-description">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
                     </div>
                 </div>
             </div>
         </div>
+    </div>
      </section>
 
      <footer>
-         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+         <div class="content footer-content">
+            <p class="footer-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+            <div class="footer-links"> Terms | Privacy</div>
+        </div>
      </footer>
 </body>
 </html>

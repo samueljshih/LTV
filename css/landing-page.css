@@ -44,15 +44,25 @@ p {
 }
 
 body {
-    margin: 0;
+    margin: 0 auto;
+}
+
+.content {
+    width: 80%;
+    margin: 0 auto;
 }
 
 /* Navigation */
 .nav {
     background-color: #004A80;
+    padding-top: 20px;
+    padding-bottom: 40px;
+}
+
+.nav-content {
     display: flex;
     color: #FFFFFF;
-    justify-content: space-between
+    justify-content: space-between;
 }
 
 .nav-logo {
@@ -64,7 +74,7 @@ body {
 }
 
 .nav-icon {
-    margin-right: 10px;
+    margin-right: 25px;
 }
 
 .search {
@@ -73,8 +83,16 @@ body {
 
 .search * {
     color: #FFFFFF;
-    margin: 0 10px;
     padding: 10px;
+}
+
+.search-text {
+    font-family: HelveticaNeue;
+    font-size: 24px;
+    color: #FFFFFF;
+    letter-spacing: 0;
+    text-align: center;
+    line-height: 29px;
 }
 
 /* Title */
@@ -117,8 +135,19 @@ body {
     display: flex;
 }
 
+.search-footer-text {
+    padding-bottom: 90px;
+}
+
 .start-here {
-    margin: 0
+    margin: 0;
+    font-family: HelveticaNeue-Bold;
+    font-size: 24px;
+    color: #FFFFFF;
+    letter-spacing: 0;
+    text-align: center;
+    line-height: 29px;
+    padding: 0px;
 }
 
 /* Colors */
@@ -140,6 +169,17 @@ body {
     letter-spacing: 0;
     text-align: center;
     line-height: 70px;
+    margin-top: 50px;
+}
+
+.reverse-email-description {   
+    margin: 20px 0;
+    font-family: HelveticaNeue;
+    font-size: 22px;
+    color: #4A4A4A;
+    letter-spacing: 0;
+    line-height: 30px;
+    margin-bottom: 40px;
 }
 
 .steps {
@@ -155,12 +195,72 @@ body {
     display: flex;
     height: 100px;
     margin-top: 10px;
+    margin-bottom: 50px;
 }
 
 .point-left {
     font-size: 30px;
+    margin-right: 20px;
 }
 
 .point-right {
     margin-left: 10px;
+    margin-right: 60px;
+}
+
+.point-title {
+    font-family: HelveticaNeue-Bold;
+    font-size: 22px;
+    color: #004A80;
+    letter-spacing: 0;
+    margin-bottom: 10px;
+}
+
+.number {
+    font-family: HelveticaNeue-Bold;
+    font-size: 48px;
+    color: #F6BC25;
+    letter-spacing: 0;
+    text-align: center;
+    background: #004A80;
+    padding: 30px;
+    border-radius: 50%;
+    display:block;
+    min-width: 50px;
+    min-height:50px;
+}
+
+.point-description {
+    font-family: HelveticaNeue;
+    font-size: 18px;
+    color: #000000;
+    letter-spacing: 0;
+    line-height: 26px;
+}
+
+/* Footer */
+footer {
+    margin: 14px 0;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+}
+
+.footer-text {
+    font-family: HelveticaNeue;
+    font-size: 15px;
+    color: #999999;
+    letter-spacing: 0;
+    line-height: 20px;
+    flex: 5;
+}
+
+.footer-links {
+    font-family: HelveticaNeue-Bold;
+    font-size: 14px;
+    color: #004A80;
+    letter-spacing: 0;
+    flex: 1;
 }
