@@ -57,11 +57,11 @@
                             </div>
                         </div>
                         <div class="result-bottom-info-container">
-                            <div class="result-email">
-                                <h2 class="result-title result-item">Email</h2>
+                            <div class="result-email result-item">
+                                <h2 class="result-title">Email</h2>
                             </div>
-                            <div class="result-relatives result-title result-item">
-                                Relatives
+                            <div class="result-relatives result-item">
+                                <h2 class="result-title">Relatives</h2>
                             </div>
                         </div>
                     </div>
@@ -72,13 +72,17 @@
 
     <section class="search">
         <div class="content">
-            <h1 class="title">Search Any Email Address</h1>
-            <p class="search-text"><span class="start-here yellow">Start Here</span> - Look up the owner's name, photos and online profiles. See what you find!</h2>
-            <div class="search-email-form">
+            <h1 class="search-content-title">Search Any Email Address</h1>
+            <p class="search-text"><span class="start-here yellow">Start Here</span> - <span class="search-content-lookup-text">Look up the owner's name, photos and online profiles. See what you find!</span></h2>
+            <form action=""class="search-email-form">
                 <input type="email" name="email" class="email-input" placeholder="EMAIL">
                 <input type="submit" value="GO!" class="submit-btn">
+            </form>
+            <div class="validation-error"></div>
+            <div class="search-lock-footer">
+                <img src="./assets/pngs/lock@2x.png" alt="lock" class="lock">
+                <p class="search-footer-text yellow">Enter Any Email Address. They won't be notified</p>
             </div>
-            <p class="search-footer-text yellow">Enter Any Email Address. They won't be notified</p>
         </div>
      </section>
 
@@ -101,7 +105,7 @@
                         <h3 class="point-title">Lorem Ipsum</h3>
                         <p class="point-description">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
                     </div>
-                </div>
+                </div>  
                 <div class="point">
                     <div class="point-left number">3</div>
                     <div class="point-right">

@@ -3,52 +3,116 @@ const email = document.querySelector('.email-input')
 const searchSection = document.querySelector('.search')
 const reverseEmailLookup = document.querySelector('.reverse-email-lookup')
 const loading = document.querySelector('.loading')
+const validationError = document.querySelector('.validation-error')
+const resultsNode = document.querySelector('.results')
+const noResultsNode = document.querySelector('.no-results')
+
 let result;
+let errorCount = 0;
+let validationNode;
 
 const submitForm = (e) => {
     e.preventDefault()
 
+    if(!email.value) {
+        if(errorCount === 0) {
+            email.style.border = '3px solid red'
+            
+            validationNode = document.createElement('p')
+            const validationTxt = document.createTextNode('Please add a valid email address')
+            validationNode.style.color = 'white';
+            validationNode.style.backgroundColor = 'red';
+            validationNode.style.padding = '0 0 10px 0';
+            validationNode.style.width= '25%'
+            validationNode.appendChild(validationTxt)
+            validationError.prepend(validationNode)
+        }
+
+        errorCount++;
+        return
+    } 
+
+    if(errorCount > 0) {
+        email.style.border = '1px solid #b0b0b0'
+        validationNode.remove()
+        errorCount = 0;
+    }
+
+    // Hide main search
+
     searchSection.style.display = 'none';
     reverseEmailLookup.style.display = 'none';
+    noResultsNode.style.display = 'none';
     loading.style.display = 'block' 
 
     // Fetch Data
-    // const data = fetch('https://ltv-data-api.herokuapp.com/api/v1/records.json?email=doesmith@example.com', {mode: 'cors'}).then((data) => {
-    //     console.log('FETCHING')
-    //     return data.json()}).then((data) => {
-    //     console.log('DATA FROM FETCH', data)
-    // }).catch((err) => {
-    //     console.log('Error', err)
-    // })
+    const data = fetch('https://ltv-data-api.herokuapp.com/api/v1/records.json?email=doesmith@example.com', {mode: 'cors'}).then((data) => {
+        return data.json()}).then((data) => {
 
-    setTimeout(() => {
-       loading.style.display = 'none' 
-       result = {
-        "email": "doesmith@example.com",
-        "first_name": "Dow",
-        "last_name": "Smith",
-        "description": "Lorem Ipsum Dolor",
-        "address": "123 Chocolate Ave",
-        "phone_numbers": [
-            "2125551234",
-            "2125551235",
-            "2125551236"
-        ],
-        "relatives": [
-            "Jane Smith",
-            "Jon Smith"
-        ]
-    }
+        if(!Array.isArray(result)) {
+            populateInfo(result)
+        } else {
+            const searchTitle = document.querySelector('.search-content-title')
+            const searchLookupText = document.querySelector(".search-content-lookup-text")
+            const startHere = document.querySelector('.start-here')
+            
+            searchTitle.innerHTML = `Can't find the right person?`
+            searchLookupText.innerHTML = "Make a new search"
+            startHere.innerHTML = 'Try Again'
 
-    populateInfo(result)
-    }, 2000)
+            noResultsNode.style.display = 'block'
+            searchSection.style.display = 'block'
+        }
+    })
+    .catch((err) => {
+    })
+
+    // setTimeout(() => {
+    //    loading.style.display = 'none' 
+    //    result = {
+    //     "email": "doesmith@example.com",
+    //     "first_name": "Dow",
+    //     "last_name": "Smith",
+    //     "description": "Lorem Ipsum Dolor",
+    //     "address": "123 Chocolate Ave",
+    //     "phone_numbers": [
+    //         "2125551234",
+    //         "2125551235",
+    //         "2125551236"
+    //     ],
+    //     "relatives": [
+    //         "Jane Smith",
+    //         "Jon Smith"
+    //     ]
+    // }
+    // // result = []
+    // console.log('result', result)
+    // if(!Array.isArray(result)) {
+    //     populateInfo(result)
+    // } else {
+    //     const searchTitle = document.querySelector('.search-content-title')
+    //     const searchLookupText = document.querySelector(".search-content-lookup-text")
+    //     const startHere = document.querySelector('.start-here')
+        
+    //     searchTitle.innerHTML = `Can't find the right person?`
+    //     searchLookupText.innerHTML = "Make a new search"
+    //     startHere.innerHTML = 'Try Again'
+
+    //     noResultsNode.style.display = 'block'
+    //     searchSection.style.display = 'block'
+    // }
+
+    // }, 2000)
 }
 
 const populateInfo = (result) => {
+    
+    // Short Circuit if no results
     if(Array.isArray(result)) {
-        // Nothing in Array
         return 
-    }
+    } 
+
+    resultsNode.style.display = 'block';
 
     const { email, first_name, last_name, description, address, phone_numbers, relatives} = result;
 
@@ -91,8 +155,6 @@ const populateInfo = (result) => {
             resultRelatives.appendChild(relativeNode)
         })
     }
-
-
 }
 
 input.addEventListener('click', submitForm)

@@ -93,10 +93,11 @@ body {
     letter-spacing: 0;
     line-height: 29px;
     margin: 0 15px;
+    text-align: center;
 }
 
 /* Title */
-.title {
+.search-content-title {
     font-family: HelveticaNeue-Bold;
     font-size: 48px;
     color: #FFFFFF;
@@ -133,10 +134,11 @@ body {
 
 .search-email-form {
     display: flex;
+    padding: 10px 10px 0 10px;
 }
 
 .search-footer-text {
-    padding-bottom: 90px;
+    padding: 10px 10px 90px 10px;
 }
 
 .start-here {
@@ -156,11 +158,11 @@ body {
 }
 
 /* Reverse Email Lookup Section */
-
 .reverse-email-lookup {
     display: flex;
     flex-direction: column;
-    background-image: linear-gradient(0deg, #E6E6E6 0%, #FFFFFF 100%);}
+    background-image: linear-gradient(0deg, #E6E6E6 0%, #FFFFFF 100%);
+}
 
 .reverse-title {
     font-family: HelveticaNeue-Bold;
@@ -227,7 +229,7 @@ body {
     border-radius: 50%;
     display:block;
     min-width: 50px;
-    min-height:50px;
+    min-height: 50px;
 }
 
 .point-description {
@@ -321,6 +323,10 @@ footer {
 
 /* Results */
 
+.results {
+    display: none;
+}
+
 .results-text {
     font-family: HelveticaNeue-Bold;
     font-size: 52px;
@@ -391,6 +397,7 @@ footer {
 
 .result-bottom-info {
     display: flex;
+    margin-bottom: 40px;
 }
 
 .result-name {
@@ -400,7 +407,64 @@ footer {
     letter-spacing: 0;
 }
 
-
 .result-bottom-info-container {
     width: 50%;
+}
+
+.result-item{
+    margin: 0 10px 10px 0;
+}
+
+.lock {
+    height: 19px;
+    width: 15px;
+}
+
+.search-lock-footer {
+    display: flex;
+}
+
+
+@media (max-width:480px) {
+    .steps {
+        flex-direction: column;
+    }
+
+    .search-email-form {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    .email-input {
+        margin-right: 0;
+        margin-bottom: 10px;
+        height: 50px;
+    }
+
+    .submit-btn {
+        width: 80%
+    }
+
+    .number {
+        min-width: 20px;
+        min-height: 20px;
+    }
+
+    .point-description {
+        font-family: HelveticaNeue;
+        font-size: 18px;
+        color: #000000;
+        letter-spacing: 0;
+        line-height: 20px;
+    }
+
+    .point {
+        margin-bottom: 110px;
+    }
+
+    .footer-content {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
 }
