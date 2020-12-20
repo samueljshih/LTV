@@ -1,0 +1,19 @@
+{
+  "name": "ltv-project",
+  "version": "1.0.0",
+  "description": "Code Challenge",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/samueljshih/LTV.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/samueljshih/LTV/issues"
+  },
+  "homepage": "https://github.com/samueljshih/LTV#readme"
+}
