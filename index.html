@@ -18,14 +18,66 @@
         </div>
     </nav>
 
+    <section class="loading">
+        <div class="content loading-content">
+            <img id="loading-spinner" src="./assets/loading_spinner.gif"/>
+            <h2 class="loading-wait-text">Please wait a moment...</h2>
+        </div>
+    </section>
+
+    <section class="no-results">
+        <div class="content">
+            <h2 class="no-results-text">0 Results</h2>
+            <p class="no-results-try-again">Try starting a new search below</p>
+        </div>
+    </section>
+
+    <section class="results">
+        <div class="content">
+            <div class="results-header">
+                <h2 class="results-text">1 Results</h2>
+                <p class="results-detail-text">Look at the result below to see the details of the person you’re searched for.</p>
+            </div>
+            <div class="result">
+                <div class="result-person-container">
+                    <img src="./assets/pngs/icn_person@2x.png" alt="person_icon" class="result-person-icon">
+                </div>
+                <div class="result-info">
+                    <div class="result-top-info">
+                        <h2 class="result-name"></h2>
+                        <p class="result-description"></p>
+                    </div>
+                    <div class="result-bottom-info">
+                        <div class="result-bottom-info-container">
+                            <div class="result-address result-item">
+                                <h2 class="result-title">Address</h2>
+                            </div>
+                            <div class="result-phone-numbers result-item">
+                                <h2 class="result-title">Phone Numbers</h2>
+                            </div>
+                        </div>
+                        <div class="result-bottom-info-container">
+                            <div class="result-email">
+                                <h2 class="result-title result-item">Email</h2>
+                            </div>
+                            <div class="result-relatives result-title result-item">
+                                Relatives
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <section class="search">
         <div class="content">
             <h1 class="title">Search Any Email Address</h1>
             <p class="search-text"><span class="start-here yellow">Start Here</span> - Look up the owner's name, photos and online profiles. See what you find!</h2>
-            <form action="" class="search-email-form">
+            <div class="search-email-form">
                 <input type="email" name="email" class="email-input" placeholder="EMAIL">
                 <input type="submit" value="GO!" class="submit-btn">
-            </form>
+            </div>
             <p class="search-footer-text yellow">Enter Any Email Address. They won't be notified</p>
         </div>
      </section>

@@ -91,8 +91,8 @@ body {
     font-size: 24px;
     color: #FFFFFF;
     letter-spacing: 0;
-    text-align: center;
     line-height: 29px;
+    margin: 0 15px;
 }
 
 /* Title */
@@ -263,4 +263,144 @@ footer {
     color: #004A80;
     letter-spacing: 0;
     flex: 1;
+}
+
+/* Loading */
+.loading {
+    background-color: rgb(247, 247, 247);
+    display: none;
+}
+
+.loading-content {
+    display: flex;
+    align-items: center;
+    align-content: center;
+    flex-direction: column;
+}
+
+#loading-spinner {
+    height: 150px;
+    width: 150px;
+    margin: 100px auto 28px;
+}
+
+.loading-wait-text {
+    margin-top: 28px;
+    margin-bottom: 150px;
+    font-family: HelveticaNeue-Bold;
+    font-size: 24px;
+    color: #004A80;
+    letter-spacing: 0;
+    text-align: center;
+}
+
+/* No Results */
+.no-results {
+    display: none;
+}
+
+.no-results-text {
+    font-family: HelveticaNeue-Bold;
+    font-size: 52px;
+    color: #004A80;
+    letter-spacing: 0;
+    text-align: center;
+    margin-top: 150px;
+    margin-bottom: 20px;
+}
+
+.no-results-try-again {
+    font-family: HelveticaNeue;
+    font-size: 24px;
+    color: #000000;
+    letter-spacing: 0;
+    text-align: center;
+    line-height: 32px;
+    margin-bottom: 150px;
+}
+
+/* Results */
+
+.results-text {
+    font-family: HelveticaNeue-Bold;
+    font-size: 52px;
+    color: #004A80;
+    letter-spacing: 0;
+    text-align: center;
+    margin-top: 150px;
+    margin-bottom: 20px;
+}
+
+.results-detail-text     {
+    font-family: HelveticaNeue;
+    font-size: 24px;
+    color: #000000;
+    letter-spacing: 0;
+    text-align: center;
+    line-height: 32px;
+    margin-bottom: 10px;
+}
+
+.result {
+    background: #FFFFFF;
+    box-shadow: 0 2px 4px 0 rgba(0,0,0,0.50);
+    border-radius: 30px;
+    display: flex;
+}
+
+.info {
+    font-family: HelveticaNeue;
+    font-size: 16px;
+    color: #000000;
+    letter-spacing: 0;
+    line-height: 24px;
+}
+
+.result-title {
+    font-family: HelveticaNeue-Bold;
+    font-size: 20px;
+    color: #004A80;
+    letter-spacing: 0;
+}
+
+.result-person-container {
+    flex: 1;
+    max-height: 63px;
+    max-width: 63px;
+    background:#004A80 ;
+    display: flex;
+    border-radius:50%;
+    align-items: center;
+    justify-content: center;
+    margin: 40px 20px 0 40px;
+}
+
+.result-person-icon {
+    width: 28px;
+    height: 32px;
+}
+
+.result-info {
+    margin-top: 40px;
+    flex: 4;
+}
+
+.result-top-info {
+    margin-bottom: 20px;
+}
+
+.result-bottom-info {
+    display: flex;
+}
+
+.result-name {
+    font-family: HelveticaNeue-Bold;
+    font-size: 32px;
+    color: #004A80;
+    letter-spacing: 0;
+}
+
+
+.result-bottom-info-container {
+    width: 50%;
 }
