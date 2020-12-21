@@ -97,7 +97,6 @@ const submitForm = (e) => {
      result = []
     }
 
-    console.log('result', result)
     if(!Array.isArray(result)) {
         populateInfo(result)
     } else {
