@@ -13,6 +13,7 @@ let validationNode;
 
 const submitForm = (e) => {
     e.preventDefault()
+    let hasNoResult = false;
 
     if(!email.value) {
         if(errorCount === 0) {
@@ -31,6 +32,10 @@ const submitForm = (e) => {
         errorCount++;
         return
     } 
+
+    if(email.value === 'no-result') {
+        hasNoResult = true
+    }
 
     if(errorCount > 0) {
         email.style.border = '1px solid #b0b0b0'
@@ -88,7 +93,11 @@ const submitForm = (e) => {
             "Jon Smith"
         ]
     }
-    // result = []
+
+    if(hasNoResult) {
+     result = []
+    }
+
     console.log('result', result)
     if(!Array.isArray(result)) {
         populateInfo(result)
