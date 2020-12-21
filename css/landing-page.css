@@ -467,4 +467,24 @@ footer {
         justify-content: center;
         align-items: center;
     }
+
+    .validation-error p {
+        width: 100% !important;
+    }
+
+    .result-person-container {
+        display: none;
+    }
+
+    .result-info {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        margin-left: 40px;
+    }    
+
+    .result-bottom-info {
+        display: block;
+        justify-content: center;
+    }
 }

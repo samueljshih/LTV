@@ -44,7 +44,6 @@ const submitForm = (e) => {
     }
 
     // Hide main search
-
     searchSection.style.display = 'none';
     reverseEmailLookup.style.display = 'none';
     noResultsNode.style.display = 'none';
