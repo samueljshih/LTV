@@ -132,6 +132,16 @@ body {
     text-align: center;
 }
 
+.submit-btn:hover {
+    background: #F2DA56;
+    box-shadow: 0 3px 0 0 #A6953B, inset 0 1px 0 0 #FFFFFF;
+}
+
+.submit-btn:active {
+    background: #F6BC25;
+    box-shadow: 0 3px 0 0 #A6953B, inset 0 1px 0 0 #FFFFFF;
+}
+
 .search-email-form {
     display: flex;
     padding: 10px 10px 0 10px;
