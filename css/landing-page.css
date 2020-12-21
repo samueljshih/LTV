@@ -488,3 +488,19 @@ footer {
         justify-content: center;
     }
 }
+
+@media (max-width:1180px) {
+
+    .point {
+        margin-bottom: 100px;
+    }
+
+    .point-description {
+        font-size: 18px;
+        line-height: 17px;
+    }
+
+    .point-right {
+        margin-right: 0;
+    }
+}
