@@ -50,69 +50,70 @@ const submitForm = (e) => {
     loading.style.display = 'block' 
 
     // Fetch Data
-    // const data = fetch('https://ltv-data-api.herokuapp.com/api/v1/records.json?email=doesmith@example.com', { headers: {
-    //     "Access-Control-Allow-Origin": "*",
-    //     "Content-Type": "application/json"
-    //   }}).then((data) => {
-    //     return data.json()}).then((data) => {
-
-    //     if(!Array.isArray(result)) {
-    //         populateInfo(result)
-    //     } else {
-    //         const searchTitle = document.querySelector('.search-content-title')
-    //         const searchLookupText = document.querySelector(".search-content-lookup-text")
-    //         const startHere = document.querySelector('.start-here')
+    const data = fetch(`https://ltv-data-api.herokuapp.com/api/v1/records.json?email=${email?.value}`, { headers: {
+        "Access-Control-Allow-Origin": "*",
+        "Content-Type": "application/json"
+      }}).then((data) => {
+        return data.json()}).then((data) => {
+            loading.style.display = 'none' 
+            result = data
+        if(!Array.isArray(result)) {
+            populateInfo(result)
+        } else {
+            const searchTitle = document.querySelector('.search-content-title')
+            const searchLookupText = document.querySelector(".search-content-lookup-text")
+            const startHere = document.querySelector('.start-here')
             
-    //         searchTitle.innerHTML = `Can't find the right person?`
-    //         searchLookupText.innerHTML = "Make a new search"
-    //         startHere.innerHTML = 'Try Again'
+            searchTitle.innerHTML = `Can't find the right person?`
+            searchLookupText.innerHTML = "Make a new search"
+            startHere.innerHTML = 'Try Again'
 
-    //         noResultsNode.style.display = 'block'
-    //         searchSection.style.display = 'block'
-    //     }
-    // })
-    // .catch((err) => {
-    // })
+            noResultsNode.style.display = 'block'
+            searchSection.style.display = 'block'
+        }
+    })
+    .catch((err) => {
+    })
 
-    setTimeout(() => {
-       loading.style.display = 'none' 
-       result = {
-        "email": "doesmith@example.com",
-        "first_name": "Dow",
-        "last_name": "Smith",
-        "description": "Lorem Ipsum Dolor",
-        "address": "123 Chocolate Ave",
-        "phone_numbers": [
-            "2125551234",
-            "2125551235",
-            "2125551236"
-        ],
-        "relatives": [
-            "Jane Smith",
-            "Jon Smith"
-        ]
-    }
+    // setTimeout(() => {
+    //    loading.style.display = 'none' 
+    //    result = {
+    //     "email": "doesmith@example.com",
+    //     "first_name": "Dow",
+    //     "last_name": "Smith",
+    //     "description": "Lorem Ipsum Dolor",
+    //     "address": "123 Chocolate Ave",
+    //     "phone_numbers": [
+    //         "2125551234",
+    //         "2125551235",
+    //         "2125551236"
+    //     ],
+    //     "relatives": [
+    //         "Jane Smith",
+    //         "Jon Smith"
+    //     ]
+    // }
 
-    if(hasNoResult) {
-     result = []
-    }
+    // if(hasNoResult) {
+    //  result = []
+    // }
 
-    if(!Array.isArray(result)) {
-        populateInfo(result)
-    } else {
-        const searchTitle = document.querySelector('.search-content-title')
-        const searchLookupText = document.querySelector(".search-content-lookup-text")
-        const startHere = document.querySelector('.start-here')
+    // if(!Array.isArray(result)) {
+    //     populateInfo(result)
+    // } else {
+    //     const searchTitle = document.querySelector('.search-content-title')
+    //     const searchLookupText = document.querySelector(".search-content-lookup-text")
+    //     const startHere = document.querySelector('.start-here')
         
-        searchTitle.innerHTML = `Can't find the right person?`
-        searchLookupText.innerHTML = "Make a new search"
-        startHere.innerHTML = 'Try Again'
+    //     searchTitle.innerHTML = `Can't find the right person?`
+    //     searchLookupText.innerHTML = "Make a new search"
+    //     startHere.innerHTML = 'Try Again'
 
-        noResultsNode.style.display = 'block'
-        searchSection.style.display = 'block'
-    }
+    //     noResultsNode.style.display = 'block'
+    //     searchSection.style.display = 'block'
+    // }
 
-    }, 2000)
+    // }, 2000)
 }
 
 const populateInfo = (result) => {
